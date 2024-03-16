@@ -67,7 +67,8 @@ export const projectsData = [
       'Reviews of products',
       'Search by products',
       "Products' score based on reviews"
-    ]
+    ],
+    url: "https://loft-mebel-sooty.vercel.app/"
   }
 ] as const
 

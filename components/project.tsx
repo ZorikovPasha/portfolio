@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 
 type ProjectProps = (typeof projectsData)[number]
 
-export default function Project({ title, description, tags, imageUrl, features }: ProjectProps) {
+export default function Project({ title, description, tags, imageUrl, features, url }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -25,7 +25,7 @@ export default function Project({ title, description, tags, imageUrl, features }
       }}
       className='group mb-3 sm:mb-8 last:mb-0'
     >
-      <section className='main__project-inner grid bg-gray-100 border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20'>
+      <a href={url} target="_blank" className='main__project-inner grid bg-gray-100 border border-black/5 rounded-lg overflow-hidden relative hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20'>
         <div className='flex flex-col'>
           <h3 className='text-2xl font-semibold'>{title}</h3>
           <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>{description}</p>
@@ -64,7 +64,7 @@ export default function Project({ title, description, tags, imageUrl, features }
         group-even:right-[initial] group-even:-left-40'
           />
         </div>
-      </section>
+      </a>
     </motion.div>
   )
 }
