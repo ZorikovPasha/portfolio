@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --line-color: #e5e7eb;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
+.container {
+  width: 100%;
+  max-width: 1150px;
+  padding: 0 15px;
+}
+
+.grid {
+  display: grid;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.main {
+  &__project-inner {
+    grid-template-columns: 2fr 5fr;
+    padding: 30px 20px;
+  }
+
+  &__project-image {
+    top: 0px;
+    left: 0px;
+    right: -40px;
+  }
+
+  &__project-feature {
+    margin-top: 5px;
+    position: relative;
+    padding-left: 20px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 8px;
+      left: 0;
+      width: 10px;
+      height: 9px;
+      background-image: url('/check-black.svg');
+    }
+  }
+}
