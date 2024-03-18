@@ -4,12 +4,12 @@ import React from 'react'
 import toast from 'react-hot-toast'
 import { motion } from 'framer-motion'
 
-import SectionHeading from './section-heading'
+import { SectionHeading } from './section-heading'
 import { useSectionInView } from '@/lib/hooks'
 import { sendEmail } from '@/actions/sendEmail'
-import SubmitBtn from './submit-btn'
+import { SubmitBtn } from './submit-btn'
 
-export default function Contact() {
+export const Contact = () => {
   const { ref } = useSectionInView('Contact')
 
   return (
@@ -47,7 +47,7 @@ export default function Contact() {
       <form
         className='mt-10 flex flex-col dark:text-black'
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData)
+          const { error } = await sendEmail(formData)
 
           if (error) {
             toast.error(error)

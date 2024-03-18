@@ -1,8 +1,6 @@
 import React from 'react'
 import { CgWorkAlt } from 'react-icons/cg'
 import project1Image from '@/public/loft-furniture.png'
-import rmtdevImg from '@/public/rmtdev.png'
-import wordanalyticsImg from '@/public/wordanalytics.png'
 
 export const links = [
   {
@@ -68,20 +66,21 @@ export const projectsData = [
       'Search by products',
       "Products' score based on reviews"
     ],
-    url: "https://loft-mebel-sooty.vercel.app/"
+    url: 'https://loft-mebel-sooty.vercel.app/'
   }
 ] as const
 
 export const skillsData = [
-  'Next.js/SvelteKit/Astro',
+  'Next/Nuxt/SvelteKit/Astro',
   'TypeScript',
   'Redux Toolkit/Zustand',
   'Vitest/Jest/Playwright',
+  'ESlint/Stylelint/StandardJS/Prettier',
   'Websockets/WebRTC',
   'Strapi',
   'Nest.js',
   'Prisma',
-  'PostgreSQL/MongoDB',
+  'PostgreSQL',
   'Docker',
   'Gitlab'
 ] as const

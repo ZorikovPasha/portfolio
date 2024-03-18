@@ -1,11 +1,12 @@
 'use client'
 
 import React from 'react'
-import SectionHeading from './section-heading'
 import { motion } from 'framer-motion'
-import { useSectionInView } from '@/lib/hooks'
 
-export default function About() {
+import { useSectionInView } from '@/lib/hooks'
+import { SectionHeading } from './section-heading'
+
+export const About = () => {
   const { ref } = useSectionInView('About')
 
   return (
